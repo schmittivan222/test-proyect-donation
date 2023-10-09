@@ -620,7 +620,11 @@ input[type='radio'] {
   display: block;
   text-align: left;
 }
-
+.menu-link {
+  color: #fff;
+  text-decoration: none;
+  border: 0;
+}
 .selector-item_radio:checked + .selector-item_label {
   background: #ffc901;
   color: #000;
