@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0">
+		<title>Donate - SOS Children's Villages</title>
+		<link href="https://www.soschildrensvillages.org.uk/wp-content/uploads/2023/02/favicon-sos.png"
+			type="image/x-icon"
+			rel="icon" />
+		<link rel="stylesheet"
+			href="assets/css/styles.css">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<!-- Font Awesome CDN -->
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+		<!-- Link Google fonts -->
+		<link rel="preconnect"
+			href="https://fonts.googleapis.com">
+		<link rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Aboreto&family=Hind+Vadodara:wght@300;400&family=Lora:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet">
+	</head>
+
+	<body>
+		<header class="header header-donate">
+			<div class="container-logo-header">
+				<div class="header-wrapper">
+						<a class="logo-link"
+							href="https://www.soschildrensvillages.org.uk/"></a>
+						<img id="logo-header"
+							src="https://www.soschildrensvillages.org.uk/wp-content/uploads/2023/02/logo-sos-white.svg"
+							alt
+							data-pagespeed-url-hash="465454792">
+				</div>
+			</div>
+		</header>
+
+		<!-- Cookie Consent Banner -->
+		<div class="container-cookies"
+			id="cookie-banner">
+			<div class="d-flex justify-content-between align-items-center">
+				<p>We use cookies on our website to give you the most relevant experience by remembering your
+					preferences and repeat visits. By clicking “Accept”, you consent to the use of ALL the cookies.
+				</p>
+				<div class="d-flex">
+					<p class="p-cookies-light mr-4 pt-2">Settings</p>
+					<button class="button-cookies"
+						id="accept-cookies">Accept</button>
+				</div>
+			</div>
+		</div>
+		<!-- First Section with Background Image and Logo -->
+		<section class="first-section">
+			<div class="background-image"></div>
+		</section>
+
+		<!-- Donation Section -->
+		<section class="donation-section">
+			<div id="row-section"
+				class="row">
+				<div class="yourDonation">
+					<p class="parr-yourDonation">Your donation</p>
+				</div>
+				<div class="donation-form">
+					<form class="form-container">
+						<div class="row g-2 align-items-center mt-2 justify-content-between">
+							<div class="col-auto">
+								<label for="inputPassword6"
+									class="gfield_label">How often?</label>
+									<span class="gfield_required">*</span>
+							</div>
+							<div class="radio-buttons col-auto">
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio"
+										id="one-off"
+										name="donation-frequency"
+										class="custom-control-input">
+									<label class="custom-control-label"
+										for="one-off">One-off</label>
+								</div>
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio"
+										id="monthly"
+										name="donation-frequency"
+										class="custom-control-input"
+										checked>
+									<label class="custom-control-label"
+										for="monthly">Monthly</label>
+								</div>
+							</div>
+						</div>
+						<div class="row g-2 align-items-center mt-4 justify-content-between">
+							<div class="col-auto">
+								<label id="monthly-amount-label"
+									for="monthly-amount"
+									class="gfield_label">Monthly Amount</label>
+							</div>
+							<div class="container-radio-btn col-auto">
+								<div class="selector">
+									<div class="selector-item">
+										<input type="radio"
+											id="five-pounds"
+											name="selector"
+											class="selector-item_radio"
+											checked>
+										<label for="five-pounds"
+											class="selector-item_label1">£5</label>
+									</div>
+									<div class="selector-item">
+										<input type="radio"
+											id="twelve-pounds"
+											name="selector"
+											class="selector-item_radio">
+										<label for="twelve-pounds"
+											class="selector-item_label">£12</label>
+									</div>
+									<div class="selector-item">
+										<input type="radio"
+											id="twenty-pounds"
+											name="selector"
+											class="selector-item_radio">
+										<label for="twenty-pounds"
+											class="selector-item_label">£20</label>
+									</div>
+									<div class="selector-item">
+										<input type="radio"
+											id="other"
+											name="selector"
+											class="selector-item_radio">
+										<label for="other"
+											class="selector-item_label4">Other</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Other field initially hidden -->
+						<div class="form-group"
+							id="other-amount-label">
+							<div class="d-flex mt-4">
+									<label class="gfield_label_3">Other</label>
+									<input type="number"
+										class="input-form"
+										id="other-amount"
+										name="other-amount">
+							</div>
+						</div>
+						<div class="form-group gift-section mt-4">
+							<div class="d-flex justify-content-between">
+								<label class="gfield_label"
+									for="gift-aid">Gift Aid</label>
+								<div class="container-img">
+									<img class="imgGift"
+										src="images/gift_aid.png"
+										alt="">
+								</div>
+							</div>
+							<div class="gfield_description">
+								<h3 class="gift-title">Add 25p for every £1 you donate for free.</h3>
+							</div>
+							<div class="d-flex align-items-center">
+								<input class="checkbox-form"
+									type="checkbox"
+									class="form-check-input"
+									id="gift-aid"
+									name="gift-aid">
+								<label class="form-check-label"
+									for="gift-aid">Make my donation a Gift Aid donation</label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<p class="p-form"> Yes, I want to Gift Aid all donations made to SOS Children's Villages
+								in the last 4 years and in the future, until I notify you otherwise. I am a UK
+								taxpayer and I understand that if I pay less Income and/or Capital Gains Tax than
+								the amount of Gift Aid claimed on all my donations in the relevant tax year, it is
+								my responsibility to pay any difference. The Gift Aid claimed will be used to help
+								fund the whole of SOS Children's Village's work. </p>
+							<p class="p-form"> Please note we can only claim Gift Aid on behalf of individuals. To
+								donate on behalf of an organisation, please contact our Supporter Relations team.
+							</p>
+						</div>
+						<hr class="line2">
+						<label class="gfield_label">Personal Information</label><span class="gfield_required">*</span>
+						<div class="d-flex justify-content-between">
+							<div class="form-group">
+								<label class="label-form"
+									for="title">Title</label>
+								<select class="form-select"
+									id="title"
+									name="title">
+									<option value="mr">Dr</option>
+									<option value="mr">Mx</option>
+									<option value="mrs">Miss</option>
+									<option value="miss">Mr</option>
+									<option value="miss">Mrs</option>
+									<option value="ms">Ms</option>
+									<option value="ms">Prof.</option>
+									<option value="ms">Rev.</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="label-form"
+									for="first-name">First name</label>
+								<input type="text"
+									class="input-form"
+									id="first-name"
+									name="first-name"
+									required>
+							</div>
+							<div class="form-group">
+								<label class="label-form"
+									for="last-name">Last name</label>
+								<input type="text"
+									class="input-form"
+									id="last-name"
+									name="last-name"
+									required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="label-email"
+								for="email">Email address</label>
+							<span class="gfield_required">*</span>
+							<input type="email"
+								class="input-form"
+								id="email"
+								name="email"
+								required>
+						</div>
+						<div class="form-group">
+							<label class="gfield_label"
+								for="phone">Phone number</label>
+							<input type="tel"
+								class="input-form"
+								id="phone"
+								name="phone">
+						</div>
+						<div class="form-group">
+							<label class="gfield_label"
+								for="address">Address</label>
+							<span class="gfield_required">*</span>
+						</div>
+						<div class="form-group">
+							<label class="gfield_label_2"
+								for="address-line-2">House number and street name*</label>
+							<input type="text"
+								placeholder="Required"
+								class="input-form"
+								id="address-line-2"
+								name="address-line-2"
+								required>
+						</div>
+						<div class="form-group">
+							<label class="gfield_label_2"
+								for="address-line-2">Address Line 2</label>
+							<input type="text"
+								class="input-form"
+								id="address-line-2"
+								name="address-line-2">
+						</div>
+						<div class="form-group">
+							<label class="gfield_label_2"
+								for="city">City*</label>
+							<input type="text"
+								class="input-form"
+								placeholder="Required"
+								id="city"
+								name="city"
+								required>
+						</div>
+						<div class="form-group">
+							<label class="gfield_label_2"
+								for="postcode">Postcode*</label>
+							<input type="text"
+								class="input-form"
+								placeholder="Required"
+								id="postcode"
+								name="postcode"
+								required>
+						</div>
+						<div class="form-group">
+							<label class="gfield_label_2"
+								for="country">Country</label>
+							<select class="form-select"
+								id="country"
+								name="country">
+								<option value=""
+									selected
+									disabled>Select a country</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<div class="form-check">
+								<input type="checkbox"
+									class="form-check-input"
+									id="privacy-policy"
+									name="privacy-policy"
+									required>
+								<label class="form-check-label"
+									for="privacy-policy">I have read and accept the Privacy Policy</label>
+							</div>
+						</div>
+						<div class="box-how">
+							<h2 class="gsection_title">How can we contact you?</h2>
+							<p class="parr-how">Thank you for supporting SOS Children’s Villages. As someone who
+								cares about protecting children would you like to know how your money is used and
+								other ways to help? Please tell us how you would like us to contact you for
+								fundraising, donating or campaigning opportunities and to show you the impact your
+								support is making.</p>
+							<div class="form-group">
+								<div class="d-flex justify-content-between">
+									<label class="gfield_label_2"
+										for="contact-by-email">Can we contact you by email?</label>
+									<div>
+										<input type="checkbox"
+											class="form-check-input"
+											id="contact-by-email"
+											name="contact-by-email"
+											checked>
+										<label for="">Yes</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="d-flex justify-content-between">
+									<label class="gfield_label_2"
+										for="contact-by-email">Can we contact you by phone?</label>
+									<div>
+										<input type="checkbox"
+											class="form-check-input"
+											id="contact-by-email"
+											name="contact-by-email"
+											checked>
+										<label for="">Yes</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="d-flex justify-content-between">
+									<label class="gfield_label_2"
+										for="contact-by-email">Can we contact you by SMS/text message?</label>
+									<div>
+										<input type="checkbox"
+											class="form-check-input"
+											id="contact-by-email"
+											name="contact-by-email"
+											checked>
+										<label for="">Yes</label>
+									</div>
+								</div>
+							</div>
+							<hr class="line">
+							<div class="form-group">
+								<div class="d-flex justify-content-between">
+									<label class="gfield_label_2"
+										for="contact-by-email">Can we contact you by post?</label>
+									<div>
+										<input type="checkbox"
+											class="form-check-input"
+											id="contact-by-email"
+											name="contact-by-email"
+											checked>
+										<label for="">No</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr class="line2">
+						<div class="payment-section">
+							<div class="form-group">
+								<label class="gfield_label"
+									for="payment-method">Payment method</label>
+								<div class="radio-group">
+									<label class="radio-label">
+										<input type="radio"
+											id="credit-card"
+											name="payment-method"
+											value="credit-card">
+										Credit Card
+									</label>
+									<label class="radio-label">
+										<input type="radio"
+											id="direct-debit"
+											name="payment-method"
+											value="direct-debit">
+										Direct Debit
+									</label>
+								</div>
+							</div>
+							<div id="direct-debit-fields"
+								style="display: none;">
+								<div class="form-group">
+									<label class="gfield_label"
+										for="account-holder-name">Account holder's name*</label>
+									<input type="text"
+										class="input-form"
+										id="account-holder-name"
+										name="account-holder-name">
+								</div>
+								<div class="form-group">
+									<label class="gfield_label"
+										for="sort-code">Sort code*</label>
+									<input type="text"
+										class="input-form"
+										id="sort-code"
+										name="sort-code"
+										placeholder="10-88-00">
+								</div>
+								<div class="form-group">
+									<label class="gfield_label"
+										for="account-number">Account number*</label>
+									<input type="text"
+										class="input-form"
+										id="account-number"
+										name="account-number"
+										placeholder="00012345">
+								</div>
+								<div class="form-group">
+									<label class="gfield_label">Monthly donation date</label>
+									<div class="radio-buttons">
+										<div class="custom-control custom-radio custom-control-inline">
+											<input type="radio"
+												id="monthly-date-1"
+												name="monthly-date"
+												class="custom-control-input">
+											<label class="custom-control-label"
+												for="monthly-date-1">1st of the month</label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input type="radio"
+												id="monthly-date-15"
+												name="monthly-date"
+												class="custom-control-input">
+											<label class="custom-control-label"
+												for="monthly-date-15">15th of the month</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="form-check">
+										<input type="checkbox"
+											class="form-check-input"
+											id="direct-debit-confirmation"
+											name="direct-debit-confirmation"
+											required>
+										<label class="form-check-label"
+											for="direct-debit-confirmation"> I confirm that I am the account holder
+											and
+											am authorised to set up Direct Debit payments on this account. Your
+											payments
+											are protected by the Direct Debit Guarantee. </label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr class="line2">
+						<div class="button-container">
+							<button type="submit"
+								class="btn-form">Donate</button>
+						</div>
+				</div>
+				</form>
+				<div class="col-lg-3">
+					<div class="card-form">
+						<i class="fas fa-lock"></i>
+						<!-- Card Content -->
+						<div class="card-container">
+							<h3 class="card-tit">Secure and private</h3>
+							<p class="card-parr">You're using a secure <br> system. Your data will never be used in ways
+								that you haven't explicitly opted into.</p>
+						</div>
+					</div>
+					<div class="logos">
+						<!-- Logos Content -->
+						<img src="https://www.soschildrensvillages.org.uk/wp-content/uploads/2020/12/logo-fr-color.png">
+						<img src="https://www.soschildrensvillages.org.uk/wp-content/uploads/2020/12/logo-dd.png">
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		<!-- Subscription Section -->
+		<section class="subscription-section">
+			<div class="col-lg-12 text-center">
+				<p class="white">Stay up to date</p>
+				<div class="">
+					<input type="email"
+						class="input-email"
+						placeholder="Enter your email address"
+						aria-label="Email"
+						aria-describedby="subscribe-button">
+				</div>
+				<div class="input-group-append">
+					<button class="btn-subscribe"
+						type="button"
+						id="subscribe-button">Subscribe</button>
+				</div>
+			</div>
+		</section>
+		<!-- Footer Section -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row mt-4">
+					<div class="col-lg-4">
+						<a class="footer-logo"
+							href="https://www.soschildrensvillages.org.uk"
+							rel="home">
+							<img src="https://www.soschildrensvillages.org.uk/wp-content/uploads/2023/02/logo-sos-white.svg"
+								alt
+								data-pagespeed-url-hash="465454792">
+						</a>
+					</div>
+					<div class="col-lg-4">
+						<div class="social-media">
+							<ul class="list-unstyled d-flex justify-content-center">
+								<li class="li-icon">
+									<a href="https://www.facebook.com/soschildrensvillagesuk"
+										class="menu-link">
+										<i class="fa-brands fa-facebook-f fa-lg"
+											style="color: #222D6B;"></i>
+									</a>
+								</li>
+								<li class="li-icon">
+									<a href="https://twitter.com/soschildrenuk"
+										class="menu-link">
+										<i class="fab fa-twitter fa-lg"
+											style="color: #222D6B;"></i>
+									</a>
+								</li>
+								<li class="li-icon">
+									<a href="https://www.youtube.com/user/soschildrenuk"
+										class="menu-link">
+										<i class="fab fa-youtube fa-lg"
+											style="color: #222D6B;"></i>
+									</a>
+								</li>
+								<li class="li-icon">
+									<a href="https://www.instagram.com/soschildrenuk"
+										class="menu-link">
+										<i class="fab fa-instagram fa-lg"
+											style="color: #222D6B;" ></i>
+									</a>
+								</li>
+								<li class="li-icon">
+									<a href="https://www.linkedin.com/company/soschildrensvillagesuk"
+										class="menu-link">
+										<i class="fab fa-linkedin-in fa-lg"
+											style="color: #222D6B;"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<button class="btn-footer">Donate</button>
+					</div>
+				</div>
+				<hr class="line">
+				<div class="row mt-4">
+					<div class="col-lg-4">
+						<div class="social-media">
+							<p class="p-footer">SOS Children’s Villages UK <br>
+								Ravenscroft House, 59-61 Regent Street,
+								Cambridge, CB2 1AB</p>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<div class="contact-section">
+							<p><i class="fa-solid fa-phone icon-blue"></i>01223 365589</p>
+							<p><i class="fa-solid fa-envelope icon-blue"></i>hello@sosuk.org</p>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<p class="parr-footer">Work with us</p>
+						<p class="parr-footer">Privacy policy</p>
+						<p class="parr-footer">Terms and conditions</p>
+						<p class="parr-footer">Accessibility</p>
+					</div>
+					<div class="col-lg-2">
+						<div class="contact-section">
+							<p class="parr-footer">Safeguarding children</p>
+							<p class="parr-footer">Refund policy</p>
+							<p class="parr-footer">Complaints Policy</p>
+							<p class="parr-footer">Supporter Promise</p>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<img class="logo-sos-footer"
+							src="https://www.soschildrensvillages.org.uk/wp-content/uploads/2020/11/logo-fr.svg"
+							alt
+							width="209"
+							height="64">
+					</div>
+				</div>
+				<hr class="line">
+				<div class="d-flex justify-content-between mt-4">
+					<p class="p-copy-footer">Charity reg no. 1069204. All rights reserved.</p>
+					<p class="p-copy-bold">PROTECTING UNSUPPORTED
+						CHILDREN WORLDWIDE</p>
+				</div>
+			</div>
+		</footer>
+		<!-- Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<!-- JavaScript -->
+		<script src="assets/js/index.js"></script>
+	</body>
+
+</html>
