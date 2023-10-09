@@ -1095,4 +1095,184 @@ document.addEventListener("DOMContentLoaded", function () {
             monthlyAmountSection.style.display = "none";
         }
     });
+    // Global variables
+    var firstName = "";
+    var lastName = "";
+    var email = "";
+    var houseNumber = "";
+    var postalCode = "";
+    var city = "";
+    var privacyPolicy = "";
+    var accountHolder = "";
+    var sortCode = "";
+    var accountNumber = "";
+    var directDebit = "";
+    var other = 0;
+    var donationForm = document.querySelector('#form-donation');
+
+    const extractData = () => {
+        firstName = document.querySelector('#first-name').value.trim();
+        lastName = document.querySelector('#last-name').value.trim();
+        email = document.querySelector('#email').value.trim();
+        houseNumber = document.querySelector('#house-number').value.trim();
+        postalCode = document.querySelector('#postcode').value.trim();
+        other = document.querySelector('#other-amount').value;
+        otherText = document.querySelector('#other-amount').value.trim();
+        city = document.querySelector('#city').value.trim();
+        privacyPolicy = document.querySelector('#privacy-policy');
+        accountHolder = document.querySelector('#account-holder-name').value.trim();
+        sortCode = document.querySelector('#sort-code').value.trim();
+        accountNumber = document.querySelector('#account-number').value.trim();
+        directDebit = document.querySelector('#direct-debit-confirmation');
+    }
+
+    donationForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting by default.
+
+        extractData();
+
+        var firstNameErrorSpan = document.querySelector('#first-name + span');
+        var lastNameErrorSpan = document.querySelector('#last-name + span');
+        var emailErrorSpan = document.querySelector('#email + span');
+        var houseNumberErrorSpan = document.querySelector('#house-number + span');
+        var postalCodeErrorSpan = document.querySelector('#postcode + span');
+        var cityErrorSpan = document.querySelector('#city + span');
+        var privacyPolicyErrorSpan = document.querySelector('#error-span-privacy');
+        var directDebitErrorSpan = document.querySelector('#error-span-direct-debit');
+        var accountHolderErrorSpan = document.querySelector('#account-holder-name + span');
+        var sortCodeErrorSpan = document.querySelector('#sort-code + span');
+        var accountNumberErrorSpan = document.querySelector('#account-number + span');
+        var otherSpan = document.querySelector('#error-span-other');
+        var paymentSpan = document.querySelector('#error-span-payment');
+
+
+        // Validation for first name
+        if (firstName.length <= 2) {
+            firstNameErrorSpan.textContent = 'This field is required.';
+        } else {
+            firstNameErrorSpan.textContent = '';
+        }
+
+        // Validation for last name
+        if (lastName.length <= 2) {
+            lastNameErrorSpan.textContent = 'This field is required.';
+        } else {
+            lastNameErrorSpan.textContent = '';
+        }
+
+        // Validation for email
+        if (email === "") {
+            emailErrorSpan.textContent = 'This field is required.';
+        } else {
+            emailErrorSpan.textContent = '';
+        }
+
+        // Validation for house number
+        if (houseNumber === "") {
+            houseNumberErrorSpan.textContent = 'This field is required.';
+        } else {
+            houseNumberErrorSpan.textContent = '';
+        }
+
+        // Validation for postal code
+        if (postalCode === "") {
+            postalCodeErrorSpan.textContent = 'This field is required.';
+        } else {
+            postalCodeErrorSpan.textContent = '';
+        }
+
+        // Validation for city
+        if (city === "") {
+            cityErrorSpan.textContent = 'This field is required.';
+        } else {
+            cityErrorSpan.textContent = '';
+        }
+
+        // Validation for privacy policy checkbox
+        if (!privacyPolicy.checked) {
+            privacyPolicyErrorSpan.textContent = 'This field is required.';
+        } else {
+            privacyPolicyErrorSpan.textContent = '';
+        }
+
+        // Validation for direct debit confirmation checkbox
+        if (!directDebit.checked) {
+            directDebitErrorSpan.textContent = 'This field is required.';
+        } else {
+            directDebitErrorSpan.textContent = '';
+        }
+
+        // Validation for account holder
+        if (accountHolder.length === 0) {
+            accountHolderErrorSpan.textContent = 'This field is required.';
+        } else {
+            accountHolderErrorSpan.textContent = '';
+        }
+
+        // Validation for sort code
+        if (sortCode.length === 0) {
+            sortCodeErrorSpan.textContent = 'This field is required.';
+        } else {
+            sortCodeErrorSpan.textContent = '';
+        }
+
+        // Validation for account number
+        if (accountNumber.length === 0) {
+            accountNumberErrorSpan.textContent = 'This field is required.';
+        } else {
+            accountNumberErrorSpan.textContent = '';
+        }
+
+        // Validation for other amount
+        if (otherText === "" || parseFloat(other) < 2) {
+            otherSpan.textContent = 'You must enter at least £2.';
+        } else {
+            otherSpan.textContent = '';
+        }
+        // Validation for payment method
+        var paymentMethodCredit = document.querySelector('#credit-card');
+        var paymentMethodDirect = document.querySelector('#direct-debit');
+
+        if (!paymentMethodCredit.checked && !paymentMethodDirect.checked) {
+            paymentSpan.textContent = 'This field is required.';
+            return false;
+        } else {
+            paymentSpan.textContent = '';
+        }
+
+        if (paymentMethodCredit.checked) {
+            if (
+                firstName.length <= 2 ||
+                lastName.length <= 2 ||
+                email === "" ||
+                houseNumber === "" ||
+                postalCode === "" ||
+                city === "" ||
+                !privacyPolicy.checked
+            ) {
+                return false;
+            }
+        }
+
+        if (paymentMethodDirect.checked) {
+            if (
+                firstName.length <= 2 ||
+                lastName.length <= 2 ||
+                email === "" ||
+                houseNumber === "" ||
+                postalCode === "" ||
+                city === "" ||
+                !privacyPolicy.checked ||
+                accountHolder.length === 0 ||
+                sortCode.length === 0 ||
+                accountNumber.length === 0 ||
+                !directDebit.checked
+            ) {
+                return false;
+            }
+        }
+
+        // If all validations pass, the form is submitted
+        $('#successModal').modal('show');
+    });
 });

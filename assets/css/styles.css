@@ -101,14 +101,17 @@ body {
   border-top: 4px solid #196fd5;
   margin: 0 0px 64px 0;
   max-width: 864px;
-  background-color: #fff;
+  background: rgb(242, 242, 242);
+  background: linear-gradient(0deg,
+    rgba(242, 242, 242, 1) 90%,
+    rgba(255, 255, 255, 1) 90%);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.34);
 }
 
 .p-form {
   font-size: 14px;
   line-height: 24px;
-  color: #4a4a4a;
+  color: #180707;
 }
 
 .monthly-amount-inputs {
@@ -573,7 +576,9 @@ input[type='radio'] {
   transition-property: transform, box-shadow;
   transform: none;
 }
-
+.gift-section {
+  margin-top: 60px;
+}
 .selector-item_label1 {
   padding: 10px 17px;
   cursor: pointer;
@@ -608,6 +613,14 @@ input[type='radio'] {
   transform: none;
 }
 
+.error-span {
+  height: 1rem;
+  font-size: .85rem;
+  color: red;
+  display: block;
+  text-align: left;
+}
+
 .selector-item_radio:checked + .selector-item_label {
   background: #ffc901;
   color: #000;
@@ -623,42 +636,93 @@ input[type='radio'] {
   color: #000;
 }
 
-@media (max-width: 992px) {
-  .yourDonation {
-    display: block;
-    padding: 16px 100px;
-    text-align: center;
-    background: #196fd5;
-    margin: 0 auto;
-    color: #fff;
-    width: 90%;
-  }
-  .donation-form {
-    max-width: 100%;
-  }
-  .donation-section {
-    max-width: 100%;
-    padding: 0px;
-  }
-  .parr-yourDonation {
-    font-size: 24px;
-  }
-  .gift-title {
-    padding: 16px 40px;
-    font-size: 20px;
-    margin: 0 24px;
-  }
-}
+  @media (max-width: 1240px) {
+    .yourDonation {
+      display: block;
+      padding: 16px 100px;
+      text-align: center;
+      background: #196fd5;
+      margin: 0 auto;
+      color: #fff;
+      width: 90%;
+    }
 
-@media (max-width: 480px) {
-  .selector {
-    width: 90%;
-  }
-  .box-how {
-    margin: 32px 11px 0;
-    padding: 24px 24px 8px;
-  }
-  .form-container {
-    padding: 24px 24px 0;
-  }
-}
+    .donation-form {
+      max-width: 100%;
+    }
+
+    .donation-section {
+      max-width: 100%;
+      padding: 0px;
+    }
+    .btn-form {
+      width: 100%;
+    }
+    .parr-yourDonation {
+      font-size: 24px;
+    }
+
+    .gift-title {
+      padding: 16px 40px;
+      font-size: 20px;
+      margin: 0 24px;
+    }
+    .btn-footer {
+      min-width: 100%;
+      border-radius: 0;
+      font-size: 18px;
+      padding: 16px 32px 16px 32px;
+      margin-bottom: 20px;
+    }
+    }
+
+    @media (max-width: 992px) {
+      .center-image {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 767px) {
+
+      .p-copy-bold {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .selector {
+        width: 90%;
+      }
+    .donation-form {
+      margin-bottom: 12px;
+    }
+
+    .first-section {
+      height: 224px;
+    }
+
+    .parr-yourDonation {
+      font-size: 20px;
+    }
+
+    .p-footer {
+      padding: 0 40px;
+    }
+
+    .donation-section {
+      top: -72px;
+    }
+
+    .card-form {
+      margin: 14px;
+    }
+      .box-how {
+        margin: 32px 11px 0;
+        padding: 24px 24px 8px;
+      }
+
+      .form-container {
+        padding: 24px 24px 0;
+      }
+      }

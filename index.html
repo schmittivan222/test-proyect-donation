@@ -69,8 +69,9 @@
 					<p class="parr-yourDonation">Your donation</p>
 				</div>
 				<div class="donation-form">
-					<form class="form-container">
-						<div class="row g-2 align-items-center mt-2 justify-content-between">
+					<form id="form-donation"
+						class="form-container">
+						<div class="row g-2 align-items-center mt-2 mb-4 justify-content-between">
 							<div class="col-auto">
 								<label for="inputPassword6"
 									class="gfield_label">How often?</label>
@@ -150,8 +151,10 @@
 										id="other-amount"
 										name="other-amount">
 							</div>
+							<span id="error-span-other"
+								class="error-span"></span>
 						</div>
-						<div class="form-group gift-section mt-4">
+						<div class="form-group gift-section">
 							<div class="d-flex justify-content-between">
 								<label class="gfield_label"
 									for="gift-aid">Gift Aid</label>
@@ -188,7 +191,7 @@
 						</div>
 						<hr class="line2">
 						<label class="gfield_label">Personal Information</label><span class="gfield_required">*</span>
-						<div class="d-flex justify-content-between">
+						<div class="d-sm-block d-lg-flex justify-content-between">
 							<div class="form-group">
 								<label class="label-form"
 									for="title">Title</label>
@@ -211,18 +214,18 @@
 								<input type="text"
 									class="input-form"
 									id="first-name"
-									name="first-name"
-									required>
+									name="first-name">
+									<span class="error-span"></span>
 							</div>
-							<div class="form-group">
-								<label class="label-form"
-									for="last-name">Last name</label>
-								<input type="text"
-									class="input-form"
-									id="last-name"
-									name="last-name"
-									required>
-							</div>
+							   <div class="form-group">
+							   	<label class="label-form"
+							   		for="last-name">Last name</label>
+							   	<input type="text"
+							   			class="input-form last-name"
+							   			id="last-name"
+							   			name="last-name">
+							   			<span class="error-span"></span>
+							   			</div>
 						</div>
 						<div class="form-group">
 							<label class="label-email"
@@ -231,8 +234,8 @@
 							<input type="email"
 								class="input-form"
 								id="email"
-								name="email"
-								required>
+								name="email">
+								<span class="error-span"></span>
 						</div>
 						<div class="form-group">
 							<label class="gfield_label"
@@ -249,13 +252,14 @@
 						</div>
 						<div class="form-group">
 							<label class="gfield_label_2"
-								for="address-line-2">House number and street name*</label>
+								for="house-number">House number and street name*</label>
 							<input type="text"
 								placeholder="Required"
 								class="input-form"
-								id="address-line-2"
-								name="address-line-2"
-								required>
+								id="house-number"
+								name="house-number"
+								>
+								<span class="error-span"></span>
 						</div>
 						<div class="form-group">
 							<label class="gfield_label_2"
@@ -273,7 +277,8 @@
 								placeholder="Required"
 								id="city"
 								name="city"
-								required>
+								>
+								<span class="error-span"></span>
 						</div>
 						<div class="form-group">
 							<label class="gfield_label_2"
@@ -283,7 +288,8 @@
 								placeholder="Required"
 								id="postcode"
 								name="postcode"
-								required>
+								>
+								<span class="error-span"></span>
 						</div>
 						<div class="form-group">
 							<label class="gfield_label_2"
@@ -302,9 +308,11 @@
 									class="form-check-input"
 									id="privacy-policy"
 									name="privacy-policy"
-									required>
+									>
 								<label class="form-check-label"
 									for="privacy-policy">I have read and accept the Privacy Policy</label>
+								<span id="error-span-privacy"
+									class="error-span"></span>
 							</div>
 						</div>
 						<div class="box-how">
@@ -315,10 +323,10 @@
 								fundraising, donating or campaigning opportunities and to show you the impact your
 								support is making.</p>
 							<div class="form-group">
-								<div class="d-flex justify-content-between">
+								<div class="d-sm-block d-lg-flex justify-content-between">
 									<label class="gfield_label_2"
 										for="contact-by-email">Can we contact you by email?</label>
-									<div>
+									<div class="px-4">
 										<input type="checkbox"
 											class="form-check-input"
 											id="contact-by-email"
@@ -329,10 +337,10 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<div class="d-flex justify-content-between">
+								<div class="d-sm-block d-lg-flex justify-content-between">
 									<label class="gfield_label_2"
 										for="contact-by-email">Can we contact you by phone?</label>
-									<div>
+									<div class="px-4">
 										<input type="checkbox"
 											class="form-check-input"
 											id="contact-by-email"
@@ -343,10 +351,10 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<div class="d-flex justify-content-between">
+								<div class="d-sm-block d-lg-flex justify-content-between">
 									<label class="gfield_label_2"
 										for="contact-by-email">Can we contact you by SMS/text message?</label>
-									<div>
+									<div class="px-4">
 										<input type="checkbox"
 											class="form-check-input"
 											id="contact-by-email"
@@ -358,10 +366,10 @@
 							</div>
 							<hr class="line">
 							<div class="form-group">
-								<div class="d-flex justify-content-between">
+								<div class="d-sm-block d-lg-flex justify-content-between">
 									<label class="gfield_label_2"
 										for="contact-by-email">Can we contact you by post?</label>
-									<div>
+									<div class="px-4">
 										<input type="checkbox"
 											class="form-check-input"
 											id="contact-by-email"
@@ -376,23 +384,26 @@
 						<div class="payment-section">
 							<div class="form-group">
 								<label class="gfield_label"
-									for="payment-method">Payment method</label>
-								<div class="radio-group">
-									<label class="radio-label">
-										<input type="radio"
-											id="credit-card"
-											name="payment-method"
-											value="credit-card">
-										Credit Card
-									</label>
-									<label class="radio-label">
-										<input type="radio"
-											id="direct-debit"
-											name="payment-method"
-											value="direct-debit">
-										Direct Debit
-									</label>
-								</div>
+								for="payment-method">Payment method</label>
+								<span class="gfield_required">*</span>
+							<div class="radio-group">
+								<label class="radio-label">
+									<input type="radio"
+										id="credit-card"
+										name="payment-method"
+										value="credit-card">
+									Credit Card
+								</label>
+								<label class="radio-label">
+									<input type="radio"
+										id="direct-debit"
+										name="payment-method"
+										value="direct-debit">
+									Direct Debit
+								</label>
+								<span id="error-span-payment"
+									class="error-span"></span>
+							</div>
 							</div>
 							<div id="direct-debit-fields"
 								style="display: none;">
@@ -403,6 +414,7 @@
 										class="input-form"
 										id="account-holder-name"
 										name="account-holder-name">
+									<span class="error-span"></span>
 								</div>
 								<div class="form-group">
 									<label class="gfield_label"
@@ -412,6 +424,7 @@
 										id="sort-code"
 										name="sort-code"
 										placeholder="10-88-00">
+										<span class="error-span"></span>
 								</div>
 								<div class="form-group">
 									<label class="gfield_label"
@@ -421,6 +434,7 @@
 										id="account-number"
 										name="account-number"
 										placeholder="00012345">
+										<span class="error-span"></span>
 								</div>
 								<div class="form-group">
 									<label class="gfield_label">Monthly donation date</label>
@@ -449,13 +463,15 @@
 											class="form-check-input"
 											id="direct-debit-confirmation"
 											name="direct-debit-confirmation"
-											required>
+											>
 										<label class="form-check-label"
 											for="direct-debit-confirmation"> I confirm that I am the account holder
 											and
 											am authorised to set up Direct Debit payments on this account. Your
 											payments
 											are protected by the Direct Debit Guarantee. </label>
+										<span id="error-span-direct-debit"
+											class="error-span"></span>
 									</div>
 								</div>
 							</div>
@@ -467,7 +483,7 @@
 						</div>
 				</div>
 				</form>
-				<div class="col-lg-3">
+				<div class="col-xl-3 col-lg-12">
 					<div class="card-form">
 						<i class="fas fa-lock"></i>
 						<!-- Card Content -->
@@ -486,6 +502,33 @@
 			</div>
 			</div>
 		</section>
+		<!-- Modal Section -->
+		<div class="modal fade"
+			id="successModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="successModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog"
+				role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title"
+							id="successModalLabel">Success</h5>
+						<button type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						Donation successfully.
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- Subscription Section -->
 		<section class="subscription-section">
 			<div class="col-lg-12 text-center">
@@ -507,9 +550,9 @@
 		<!-- Footer Section -->
 		<footer class="footer">
 			<div class="container">
-				<div class="row mt-4">
-					<div class="col-lg-4">
-						<a class="footer-logo"
+				<div class="row mt-4 justify-content-center text-center">
+					<div class="col-lg-4 col-md-12 mb-4">
+						<a class="footer-logo center-image"
 							href="https://www.soschildrensvillages.org.uk"
 							rel="home">
 							<img src="https://www.soschildrensvillages.org.uk/wp-content/uploads/2023/02/logo-sos-white.svg"
@@ -517,7 +560,7 @@
 								data-pagespeed-url-hash="465454792">
 						</a>
 					</div>
-					<div class="col-lg-4">
+					<div class="col-lg-4 col-md-12">
 						<div class="social-media">
 							<ul class="list-unstyled d-flex justify-content-center">
 								<li class="li-icon">
@@ -545,7 +588,7 @@
 									<a href="https://www.instagram.com/soschildrenuk"
 										class="menu-link">
 										<i class="fab fa-instagram fa-lg"
-											style="color: #222D6B;" ></i>
+											style="color: #222D6B;"></i>
 									</a>
 								</li>
 								<li class="li-icon">
@@ -558,52 +601,59 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-lg-4">
+					<div class="col-lg-4 col-md-12">
 						<button class="btn-footer">Donate</button>
 					</div>
-				</div>
-				<hr class="line">
-				<div class="row mt-4">
-					<div class="col-lg-4">
+					<div class="col-md-12 mt-4">
+						<hr class="line">
+					</div>
+					<div class="col-lg-4 col-md-12">
 						<div class="social-media">
-							<p class="p-footer">SOS Children’s Villages UK <br>
-								Ravenscroft House, 59-61 Regent Street,
+							<p class="p-footer">SOS Children’s Villages UK <br> Ravenscroft House, 59-61 Regent Street,
 								Cambridge, CB2 1AB</p>
 						</div>
 					</div>
-					<div class="col-lg-2">
+					<div class="col-lg-4 col-md-12">
 						<div class="contact-section">
 							<p><i class="fa-solid fa-phone icon-blue"></i>01223 365589</p>
 							<p><i class="fa-solid fa-envelope icon-blue"></i>hello@sosuk.org</p>
 						</div>
 					</div>
-					<div class="col-lg-2">
+					<div class="col-lg-4 col-md-12">
 						<p class="parr-footer">Work with us</p>
-						<p class="parr-footer">Privacy policy</p>
-						<p class="parr-footer">Terms and conditions</p>
-						<p class="parr-footer">Accessibility</p>
+						<p class="parr-footer">Safeguarding children</p>
+						</div>
+						<div class="col-md-12">
+							<hr class="line">
+						</div>
+						<div class="col-lg-4 col-md-12">
+							<div class="contact-section">
+							<p class="parr-footer">Privacy policy</p>
+							<p class="parr-footer">Terms and conditions</p>
+							<p class="parr-footer">Accessibility</p>
+						</div>
 					</div>
-					<div class="col-lg-2">
+					<div class="col-lg-4 col-md-12">
 						<div class="contact-section">
-							<p class="parr-footer">Safeguarding children</p>
 							<p class="parr-footer">Refund policy</p>
 							<p class="parr-footer">Complaints Policy</p>
 							<p class="parr-footer">Supporter Promise</p>
 						</div>
 					</div>
-					<div class="col-lg-2">
+					<div class="col-lg-4 col-md-12 text-center">
 						<img class="logo-sos-footer"
 							src="https://www.soschildrensvillages.org.uk/wp-content/uploads/2020/11/logo-fr.svg"
 							alt
 							width="209"
 							height="64">
 					</div>
-				</div>
-				<hr class="line">
-				<div class="d-flex justify-content-between mt-4">
-					<p class="p-copy-footer">Charity reg no. 1069204. All rights reserved.</p>
-					<p class="p-copy-bold">PROTECTING UNSUPPORTED
-						CHILDREN WORLDWIDE</p>
+					<div class="col-md-12 mt-4">
+						<hr class="line">
+					</div>
+					<div class="col-md-12 d-flex justify-content-between">
+						<p class="p-copy-footer">Charity reg no. 1069204. All rights reserved.</p>
+						<p class="p-copy-bold">PROTECTING UNSUPPORTED CHILDREN WORLDWIDE</p>
+						</div>
 				</div>
 			</div>
 		</footer>
