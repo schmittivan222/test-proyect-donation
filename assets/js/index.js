@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Lista completa de países con sus códigos correspondientes
+    // List countries
     var countries = [{
             code: 'AF',
             name: 'Afghanistan'
@@ -989,16 +989,12 @@ document.addEventListener("DOMContentLoaded", function () {
             name: 'Zimbabwe'
         }
     ];
-
-    // Obtén una referencia al elemento 'select' del país
     var countrySelect = document.getElementById('country');
-
-    // Recorre la lista de países y agrega cada opción al 'select'
     for (var i = 0; i < countries.length; i++) {
         var country = countries[i];
         var option = document.createElement('option');
-        option.value = country.code; // Utiliza el código del país como valor
-        option.textContent = country.name; // Utiliza el nombre del país como texto
+        option.value = country.code;
+        option.textContent = country.name;
         countrySelect.appendChild(option);
     }
 
@@ -1023,78 +1019,70 @@ document.addEventListener("DOMContentLoaded", function () {
             directDebitFields.style.display = 'block';
         }
     });
-    // Función para ocultar el banner de cookies
+    // Function to hide the cookie banner
     function hideCookieBanner() {
         var cookieBanner = document.getElementById("cookie-banner");
         if (cookieBanner) {
             cookieBanner.style.display = "none";
         }
     }
-
-    // Obtener el botón "Accept"
     var acceptButton = document.getElementById("accept-cookies");
 
-    // Agregar un controlador de eventos al botón
+    // Add an event handler to the button
     if (acceptButton) {
         acceptButton.addEventListener("click", function () {
-            // Ocultar el banner cuando se hace clic en "Accept"
+            // Hide the banner when clicking on "Accept".
             hideCookieBanner();
         });
     }
 
-    // Obtén una referencia a los inputs "Other" y "Other Amount"
+
     const otherInput = document.getElementById("other");
     const otherAmountField = document.getElementById("other-amount-label");
 
-    // Agrega un evento cambio (change) al grupo de inputs "selector"
+
     const selectorInputs = document.querySelectorAll('input[name="selector"]');
     selectorInputs.forEach((input) => {
         input.addEventListener("change", function () {
-            // Si se selecciona cualquier opción diferente a "Other", oculta el campo "Other Amount"
             if (!otherInput.checked) {
                 otherAmountField.style.display = "none";
             }
         });
     });
 
-    // Agrega un evento cambio (change) al input "Other"
     otherInput.addEventListener("change", function () {
-        // Si se selecciona "Other", muestra el campo "Other Amount"
         if (otherInput.checked) {
             otherAmountField.style.display = "block";
         } else {
             otherAmountField.style.display = "none";
         }
     });
-    // Obtén referencias a los elementos relevantes
+
     var oneOffRadio = document.getElementById("one-off");
     var monthlyRadio = document.getElementById("monthly");
     var monthlyAmountSection = document.getElementById("monthly-amount-label");
 
-    // Agrega un evento de cambio al radio "One-off"
+
     oneOffRadio.addEventListener("change", function () {
         if (oneOffRadio.checked) {
-            // Si "One-off" está seleccionado, oculta el campo "Monthly Amount:"
             monthlyAmountSection.style.display = "none";
             var priceOptionsContainer = document.querySelector(".container-radio-btn");
             priceOptionsContainer.classList.remove("col-auto");
         } else {
-            // Si no, muestra el campo "Monthly Amount:"
             monthlyAmountSection.style.display = "block";
         }
     });
 
     monthlyRadio.addEventListener("change", function () {
         if (monthlyRadio.checked) {
-            // Si "One-off" está seleccionado, oculta el campo "Monthly Amount:"
             monthlyAmountSection.style.display = "block";
             var priceOptionsContainer = document.querySelector(".container-radio-btn");
             priceOptionsContainer.classList.add("col-auto");
         } else {
-            // Si no, muestra el campo "Monthly Amount:"
             monthlyAmountSection.style.display = "none";
         }
     });
+
     // Global variables
     var firstName = "";
     var lastName = "";
